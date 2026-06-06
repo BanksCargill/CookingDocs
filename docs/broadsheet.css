@@ -1,0 +1,135 @@
+/* broadsheet.css — editorial render layer for CookingDocs.
+   Earthy, print-inspired. Paper background, warm ink, terracotta = shop. */
+:root {
+  --paper:   oklch(0.967 0.012 84);
+  --paper-2: oklch(0.940 0.016 80);
+  --ink:     oklch(0.275 0.018 58);
+  --ink-2:   oklch(0.445 0.020 56);
+  --ink-3:   oklch(0.605 0.018 60);
+  --line:    oklch(0.875 0.014 76);
+  --line-2:  oklch(0.815 0.018 72);
+  --terra:   oklch(0.565 0.130 38);
+  --olive:   oklch(0.560 0.080 122);
+  --clay:    oklch(0.615 0.072 56);
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --mono:  "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+* { box-sizing: border-box; }
+html { min-height: 100%; background: var(--paper); }
+html, body { margin: 0; }
+body {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── top nav ── */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in oklch, var(--paper) 86%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 880px; margin: 0 auto; padding: 16px 28px;
+  display: flex; align-items: baseline; gap: 22px;
+}
+.nav-brand {
+  font-family: var(--serif); font-weight: 600; font-size: 19px;
+  letter-spacing: -0.01em; color: var(--ink); text-decoration: none; margin-right: auto;
+}
+.nav-brand span { color: var(--terra); }
+.nav a.link {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+  color: var(--ink-3); padding-bottom: 3px; border-bottom: 1.5px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.nav a.link:hover { color: var(--ink); }
+.nav a.link.active { color: var(--terra); border-color: var(--terra); }
+
+/* ── page shell ── */
+.page { max-width: 880px; margin: 0 auto; padding: 48px 28px 80px; }
+.doc-eyebrow {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--clay); margin-bottom: 14px;
+}
+.doc-title {
+  font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 52px);
+  line-height: 1.0; letter-spacing: -0.015em; margin: 0;
+}
+.doc-rule {
+  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink);
+  padding: 8px 0; margin: 20px 0 30px; text-align: center;
+}
+.doc-rule span {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink-2);
+}
+
+/* ── shared markers ── */
+.shop { color: var(--terra); }
+.shop::before { content: "→ "; opacity: 0.6; font-weight: 600; }
+.pantry { color: var(--olive); font-style: italic; white-space: nowrap; }
+.pantry::before { content: "● "; font-style: normal; font-size: 0.7em; vertical-align: 0.12em; }
+
+/* ── Index · two-column broadsheet ── */
+.cols { columns: 2; column-gap: 44px; column-rule: 1px solid var(--line); }
+@media (max-width: 620px) { .cols { columns: 1; } }
+.bentry { break-inside: avoid; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--line); }
+.bt { font-family: var(--serif); font-size: 19px; font-weight: 600; line-height: 1.15; color: var(--ink); margin: 0 0 5px; text-wrap: balance; }
+.bmeta { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--ink-2); margin-bottom: 6px; }
+.bshop { font-size: 13.5px; line-height: 1.45; }
+
+/* ── Menu · timeline ── */
+.timeline { border-top: 1px solid var(--line); }
+.tl-row { display: flex; align-items: baseline; gap: 22px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.tl-day { font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--terra); width: 56px; flex: 0 0 56px; }
+.tl-body { flex: 1; min-width: 0; }
+.tl-dish { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--ink); line-height: 1.15; margin-bottom: 4px; text-wrap: balance; }
+.tl-meta { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--ink-2); }
+.tl-shop { flex: 0 0 auto; max-width: 220px; text-align: right; font-size: 13px; line-height: 1.4; }
+@media (max-width: 620px) {
+  .tl-row { flex-wrap: wrap; gap: 4px 22px; }
+  .tl-shop { text-align: left; max-width: none; flex-basis: 100%; padding-left: 78px; }
+}
+.shoproll {
+  margin-top: 30px; padding: 18px 20px; background: var(--paper-2);
+  border-left: 2px solid var(--terra); font-size: 15px; color: var(--ink-2); line-height: 1.55;
+}
+.shoproll-h {
+  display: block; font-family: var(--mono); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--terra); margin-bottom: 6px;
+}
+
+/* ── Staples · entries with tag chips ── */
+.staples { columns: 2; column-gap: 44px; column-rule: 1px solid var(--line); }
+@media (max-width: 620px) { .staples { columns: 1; } }
+.st-entry { break-inside: avoid; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--line); }
+.st-name { font-family: var(--serif); font-size: 19px; font-weight: 600; line-height: 1.15; margin: 0 0 7px; text-wrap: balance; }
+.st-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+.chip {
+  font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: 0.03em;
+  color: var(--ink-2); background: var(--paper-2); padding: 3px 8px; border-radius: 2px;
+}
+.st-note { font-family: var(--serif); font-size: 14px; font-style: italic; color: var(--ink-2); line-height: 1.45; }
+
+/* ── Menus archive ── */
+.archive { border-top: 1px solid var(--line); }
+.arch-row {
+  display: flex; align-items: baseline; gap: 18px; padding: 18px 4px;
+  border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; transition: background .12s;
+}
+.arch-row:hover { background: var(--paper-2); }
+.arch-label { font-family: var(--serif); font-size: 21px; font-weight: 500; color: var(--ink); white-space: nowrap; }
+.arch-file { font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-left: auto; flex: 0 0 auto; }
+.arch-go { font-family: var(--mono); font-size: 11px; color: var(--terra); flex: 0 0 auto; }
+
+/* ── status / error ── */
+.status { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding: 40px 0; }
+.status.err { color: var(--terra); white-space: pre-wrap; line-height: 1.6; }
+.status code { background: var(--paper-2); padding: 1px 5px; border-radius: 2px; }
+.doc-rule code { font-family: var(--mono); font-size: 0.85em; background: var(--paper-2); padding: 1px 5px; border-radius: 2px; text-transform: none; letter-spacing: 0; }
