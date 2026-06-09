@@ -16,7 +16,7 @@
 <script>
   CD.nav('menu');
   var file = CD.getParam('file');           // e.g. menus/menu_2026-06-08.md
-  CD.loadMenu(file ? ('../' + file) : '../menus/latest.md');
+  if (file) { CD.loadMenu('../' + file); } else { CD.loadLatestMenu('../menus/index.md'); }
 </script>
 </body>
 </html>

@@ -161,6 +161,17 @@
     } catch (e) { showError(main, e, path); }
   }
 
+  async function loadLatestMenu(indexPath) {
+    var main = document.getElementById('doc');
+    try {
+      var md = await fetchMd(indexPath);
+      var m = /-\s*\[([^\]]+)\]\(([^)]+)\)/.exec(md);
+      if (!m) throw new Error('No menu entries found in ' + indexPath);
+      var base = indexPath.replace(/\/[^/]+$/, '/');
+      await loadMenu(base + m[2].trim());
+    } catch (e) { showError(main, e, indexPath); }
+  }
+
   async function loadArchive(path) {
     var main = document.getElementById('doc');
     try {
@@ -188,6 +199,7 @@
     nav: nav,
     loadIndex: loadIndex,
     loadMenu: loadMenu,
+    loadLatestMenu: loadLatestMenu,
     loadStaples: loadStaples,
     loadArchive: loadArchive,
     parseTables: parseTables,
