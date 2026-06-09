@@ -38,3 +38,6 @@ All recipes must include the following frontmatter tags:
 
 ## Recipe Template
 All recipes must follow the schema in `recipes/_template.md`.
+
+## Web Layer
+The site is a static viewer in `docs/` — vanilla JS, no build step. Before editing any file in `docs/` (HTML, CSS, or `viewer.js`), read the `/web-layer` skill for architecture context. It covers the nav array, page shell pattern, renderer API, and CSS class map.

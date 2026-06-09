@@ -68,7 +68,7 @@
 
   // ── nav ──
   function nav(active) {
-    var items = [['index.html', 'Index', 'index'], ['menu.html', 'Menu', 'menu'], ['menus.html', 'Menus', 'menus'], ['staples.html', 'Staples', 'staples']];
+    var items = [['menu.html', 'Current Menu', 'menu'], ['menus.html', 'Menus', 'menus'], ['staples.html', 'Staples', 'staples'], ['index.html', 'Index', 'index']];
     var html = '<div class="nav-inner"><a class="nav-brand" href="index.html">Cooking<span>Docs</span></a>' +
       items.map(function (it) {
         return '<a class="link' + (it[2] === active ? ' active' : '') + '" href="' + it[0] + '">' + it[1] + '</a>';

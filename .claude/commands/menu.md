@@ -56,7 +56,7 @@ Column alignment rules (per FORMAT.md):
 ```markdown
 # Dinner Menu — Week of [Date]
 
-*Serves 4 · no protein repeated back-to-back*
+*Serves 4 · ~30 min active*
 
 | Day | Dish         | Sides        | Cuisine  |
 | :-- | :----------- | :----------- | :------- |
