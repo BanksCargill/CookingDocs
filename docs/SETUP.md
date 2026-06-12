@@ -55,7 +55,7 @@ just keep using the aligned-table format (see `FORMAT.md`).
 
 ## Format the viewer expects
 
-- **index.md** — one GFM table with columns `Dish · Cuisine · Protein · Min · Kid · Shopping`.
+- **index.md** — one GFM table with columns `Dish · Cuisine · Protein · Min · Shopping`.
 - **menu files** — one table `Day · Dish · Cuisine · Protein · Shopping`, plus an optional
   `**Shopping list** — …` line that becomes the rollup box.
 - **dinnerStaples.md** — one table `Dish · Tags · Notes` (Tags comma-separated).

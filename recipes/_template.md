@@ -3,7 +3,6 @@ title:
 cuisine:
 protein:
 key_ingredients: []
-kid_friendly:
 cook_time_minutes:
 servings: 4
 last_made:

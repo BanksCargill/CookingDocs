@@ -26,6 +26,11 @@ This file is the source of truth for what is always on hand. Claude should treat
 - Apples
 - Lemons
 - Limes
+- Avocado
+- Cilantro
+- Frozen spinach
+- Cheddar
+- American cheese
 - Eggs
 - Milk
 - Yogurt
@@ -40,3 +45,18 @@ This file is the source of truth for what is always on hand. Claude should treat
 - Soy sauce, fish sauce, sesame oil
 - Vinegars (red wine, white wine, apple cider)
 - Chicken and vegetable stock
+- Gochujang
+- Tortillas
+- Pasta
+- Pecorino
+- Dried shiitakes
+
+## Equipment
+- Immersion circulator (sous vide)
+- Smoker
+- KitchenAid stand mixer with meat grinder and pasta attachments
+- Cuisinart food processor
+- Vitamix blender
+- Immersion blender
+- Grill
+- Air fryer

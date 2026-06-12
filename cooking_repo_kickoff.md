@@ -41,8 +41,7 @@ Write `CLAUDE.md` at the root with the following content:
 ### About the Cook
 - Has a professional or culinary background — do not over-explain techniques, equipment, or terminology. Assume full competence.
 - Approaches cooking intuitively — recipes are loose inspiration, not strict instructions. Technique suggestions should be precise and professional.
-- Cooks for a family of ~4 including kids; one or more are picky eaters.
-- "Kid-friendly" means at least one component on the plate the kids will reliably eat — the whole dish does not need to be mild or simple. The kids are eating more adventurously over time.
+- Cooks for a family of ~4.
 - Enjoys a wide variety of cuisines with no strong exclusions.
 
 ### Pantry
@@ -71,7 +70,6 @@ All recipes must include the following frontmatter tags:
 - `cuisine`
 - `protein`
 - `key_ingredients` (non-pantry only)
-- `kid_friendly` (true/false)
 - `cook_time_minutes`
 
 ### Recipe Template
@@ -135,7 +133,7 @@ Write `dinnerStaples.md` as a lightweight tagged list of dinners in regular rota
 **Tag conventions:**
 - Cuisine: `#italian` `#japanese` `#mexican` `#american` `#spanish` `#cajun` `#korean` etc.
 - Protein: `#chicken` `#beef` `#pork` `#fish` `#vegetarian` `#sausage` etc.
-- Character: `#quick` `#comfort` `#kidfriendly` `#fancy` `#onepan` etc.
+- Character: `#quick` `#comfort` `#fancy` `#onepan` etc.
 
 Populate with these initial entries:
 
@@ -143,7 +141,7 @@ Populate with these initial entries:
 - **Carbonara** — Pasta, eggs, bacon, parmesan, black pepper. No cream. #italian #pasta #pork #quick
   > Crispy bacon works fine as a guanciale sub.
 
-- **Japanese Chicken with Cucumber and Rice** — Soy-glazed chicken thighs over steamed rice with fresh or quick-pickled cucumber. #japanese #chicken #kidfriendly #quick
+- **Japanese Chicken with Cucumber and Rice** — Soy-glazed chicken thighs over steamed rice with fresh or quick-pickled cucumber. #japanese #chicken #quick
 ```
 
 ---
@@ -158,7 +156,6 @@ title:
 cuisine:
 protein:
 key_ingredients: []
-kid_friendly:
 cook_time_minutes:
 servings: 4
 last_made:
@@ -191,7 +188,7 @@ last_made:
 
 Write `recipes/index.md` as a metadata table. This is a reference index only — full recipe files are written separately.
 
-Columns: `Recipe Title | Cuisine | Protein | Key Non-Pantry Ingredients | Kid-Friendly | Cook Time`
+Columns: `Recipe Title | Cuisine | Protein | Key Non-Pantry Ingredients | Cook Time`
 
 Populate with the following initial entries. Infer metadata from the recipe names — flag anything uncertain:
 

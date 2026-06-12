@@ -121,11 +121,15 @@
       var html = header(main, 'menus / ' + path.split('/').pop(), getTitle(md) || 'Dinner Menu', getSubtitle(md));
       html += '<div class="timeline">';
       t.rows.forEach(function (r) {
-        var meta = [cell(r, H, 'Cuisine'), cell(r, H, 'Protein')].filter(Boolean).join(' · ');
+        var dish = cell(r, H, 'Dish');
+        var sides = cell(r, H, 'Sides');
+        var meta = cell(r, H, 'Cuisine');
         html += '<div class="tl-row"><div class="tl-day">' + escapeHtml(cell(r, H, 'Day')) + '</div>' +
-          '<div class="tl-body"><div class="tl-dish">' + escapeHtml(cell(r, H, 'Dish')) + '</div>' +
-          '<div class="tl-meta">' + escapeHtml(meta) + '</div></div>' +
-          '<div class="tl-shop">' + shopHtml(cell(r, H, 'Shop')) + '</div></div>';
+          '<div class="tl-body"><div class="tl-dish">' + escapeHtml(dish) + '</div>' +
+          (sides ? '<div class="tl-sides">' + escapeHtml(sides) + '</div>' : '') +
+          '</div>' +
+          (meta ? '<div class="tl-meta-right">' + escapeHtml(meta) + '</div>' : '') +
+          '</div>';
       });
       html += '</div>';
       var list = getShoppingList(md);

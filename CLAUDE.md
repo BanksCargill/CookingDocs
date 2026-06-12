@@ -5,8 +5,7 @@
 ## About the Cook
 - Has a professional or culinary background — do not over-explain techniques, equipment, or terminology. Assume full competence.
 - Approaches cooking intuitively — recipes are loose inspiration, not strict instructions. Technique suggestions should be precise and professional.
-- Cooks for a family of ~4 including kids; one or more are picky eaters.
-- "Kid-friendly" means at least one component on the plate the kids will reliably eat — the whole dish does not need to be mild or simple. The kids are eating more adventurously over time.
+- Cooks for a family of ~4.
 - Enjoys a wide variety of cuisines with no strong exclusions.
 
 ## Pantry
@@ -35,7 +34,6 @@ All recipes must include the following frontmatter tags:
 - `cuisine`
 - `protein`
 - `key_ingredients` (non-pantry only)
-- `kid_friendly` (true/false)
 - `cook_time_minutes`
 
 ## Recipe Template
