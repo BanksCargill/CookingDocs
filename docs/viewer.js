@@ -148,11 +148,16 @@
       var html = header(main, 'dinnerStaples.md', getTitle(md) || 'Dinner Staples', getSubtitle(md));
       html += '<div class="staples">';
       t.rows.forEach(function (r) {
-        var tags = (cell(r, H, 'Tag') || '').split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+        var chips = [cell(r, H, 'Cuisine'), cell(r, H, 'Protein')].filter(Boolean);
+        var min   = cell(r, H, 'Min');
+        var sides = cell(r, H, 'Sides');
+        var note  = cell(r, H, 'Note');
         html += '<article class="st-entry"><h3 class="st-name">' + escapeHtml(cell(r, H, 'Dish') || cell(r, H, 'Name')) + '</h3>';
-        if (tags.length) html += '<div class="st-tags">' + tags.map(function (x) { return '<span class="chip">' + escapeHtml(x) + '</span>'; }).join('') + '</div>';
-        var note = cell(r, H, 'Note');
-        if (note) html += '<div class="st-note">' + escapeHtml(note) + '</div>';
+        var meta = chips.map(function (x) { return '<span class="chip">' + escapeHtml(x) + '</span>'; }).join('');
+        if (min) meta += '<span class="chip">' + escapeHtml(min) + ' min</span>';
+        if (meta) html += '<div class="st-tags">' + meta + '</div>';
+        if (sides && sides !== '—') html += '<div class="st-note">' + escapeHtml(sides) + '</div>';
+        if (note  && note  !== '—') html += '<div class="st-note">' + escapeHtml(note)  + '</div>';
         html += '</article>';
       });
       html += '</div>';

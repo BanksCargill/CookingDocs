@@ -8,21 +8,21 @@ Add a dish to the dinner rotation in `dinnerStaples.md`.
 2. **Ask for an optional note** (description, substitutions, family preferences, or tips):
    > "Any notes? (or press enter to skip)"
 
-3. **Suggest tags** based on the name and note — comma-separated, no `#`. Confirm with the user before proceeding.
+3. **Collect structured fields** — suggest values based on name and note; confirm before proceeding.
 
-   Tag categories:
-   - Cuisine: `italian`, `japanese`, `mexican`, `american`, `spanish`, `cajun`, `korean`, `asian`, etc.
-   - Protein: `chicken`, `beef`, `pork`, `fish`, `vegetarian`, `sausage`, etc.
-   - Character: `quick`, `comfort`, `fancy`, `onepan`, etc.
+   - **Cuisine** — suggest (e.g. `Italian`, `Japanese`, `Mexican`, `Spanish`, `Cajun`, `Korean`, `American`)
+   - **Protein** — suggest (e.g. `chicken`, `beef`, `pork`, `fish`, `sausage`, `vegetarian`)
+   - **Min** — ask: *"Estimated active cook time in minutes?"*
+   - **Sides** — ask: *"Typical sides? (or press enter to skip)"* → use `—` if skipped
 
 4. **Insert a new row alphabetically** (by Dish name) into the pipe table in `dinnerStaples.md`.
 
    Row format:
    ```
-   | Dish Name | tag1, tag2, tag3 | Note text or — if none |
+   | Dish Name | Cuisine | Protein | Min | Sides or — | Note or — |
    ```
 
-   After inserting, re-pad the Dish and Tags columns across the header, separator, and every row if the new entry is wider than the current column width (per FORMAT.md: pad all columns except the last).
+   After inserting, re-pad all columns except Note across the header, separator, and every row if the new entry is wider than the current column width (per FORMAT.md).
 
 5. **Confirm:** "Added [Dish Name] to dinnerStaples.md."
 
