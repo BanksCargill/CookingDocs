@@ -62,5 +62,5 @@ This file is the source of truth for what is always on hand. Claude should treat
 - Cuisinart food processor
 - Vitamix blender
 - Immersion blender
-- Grill (charcoal — only fire up when cooking multiple elements simultaneously)
+- Grill (charcoal — typically fired up for proteins or multiple elements)
 - Air fryer
