@@ -18,6 +18,7 @@ This file is the source of truth for what is always on hand. Claude should treat
 - Andouille sausage
 - Salmon
 - Tinned tuna
+- Yellow lentils
 
 ## Produce & Refrigerator
 - Onions
@@ -35,6 +36,7 @@ This file is the source of truth for what is always on hand. Claude should treat
 - Milk
 - Yogurt
 - Bread
+- Frozen naan
 
 ## Pantry
 - Canned tomatoes (whole, crushed, and diced)
@@ -50,6 +52,8 @@ This file is the source of truth for what is always on hand. Claude should treat
 - Pasta
 - Pecorino
 - Dried shiitakes
+- Peanut butter
+- Almond butter
 
 ## Equipment
 - Immersion circulator (sous vide)
@@ -58,5 +62,5 @@ This file is the source of truth for what is always on hand. Claude should treat
 - Cuisinart food processor
 - Vitamix blender
 - Immersion blender
-- Grill
+- Grill (charcoal — only fire up when cooking multiple elements simultaneously)
 - Air fryer
