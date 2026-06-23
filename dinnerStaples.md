@@ -6,3 +6,5 @@
 | :-------------------------------------- | :------- | :------ | :-- | :--------------------------- | :--- |
 | Carbonara                               | Italian  | pork    | 20  | —                            | Pasta, eggs, bacon, pecorino, black pepper |
 | Japanese Chicken with Cucumber and Rice | Japanese | chicken | 25  | cucumber salad, steamed rice | — |
+| Bean and Cheese Burritos                | Mexican  | beans   | 30  | Salsa, smoothie | - |
+| Crispy Tofu Tacos                       | Mexican  | tofu    | 30  | Napa slaw, lime and chipotle crema | - |
