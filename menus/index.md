@@ -2,6 +2,7 @@
 
 Past and current weekly menus. Newest first.
 
+- [Week of August 2, 2026](menu_2026-08-02.md)
 - [Week of July 26, 2026](menu_2026-07-26.md)
 - [Week of June 28, 2026](menu_2026-06-28.md)
 - [Week of June 21, 2026](menu_2026-06-21.md)

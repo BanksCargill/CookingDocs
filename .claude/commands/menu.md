@@ -10,11 +10,11 @@ Generate a 7-day (Sun–Sat) dinner menu following all rules in CLAUDE.md.
 
 3. **Reference `pantryStaples.md`** as the source of truth for what is on hand. Note the full equipment arsenal available (smoker, immersion circulator, KitchenAid with pasta/grinder attachments, grill, air fryer) and draw on it when proposing options.
 
-4. **Generate ~10 meal options** using the Meal Options format below. Apply these rules:
-   - At least 6 options must be ~30-minute active cook time
-   - Up to 4 options may be longer or equipment-assisted (smoker, sous vide, braise, fresh pasta, etc.)
+4. **Generate ~15 meal options** using the Meal Options format below. Apply these rules:
+   - At least 9 options must be ~30-minute active cook time
+   - Up to 6 options may be longer or equipment-assisted (smoker, sous vide, braise, fresh pasta, etc.)
    - Every option must include at least one side
-   - Vary cuisines across the full list
+   - Vary cuisines and proteins across the full list
 
 5. **Iterate** — refine the list based on user feedback:
    - Swap out dishes, adjust cuisine variety, change protein distribution, or tweak the time mix as requested
@@ -48,6 +48,7 @@ Generate a 7-day (Sun–Sat) dinner menu following all rules in CLAUDE.md.
 
 Column alignment rules (per FORMAT.md):
 - Pad all columns except the last (`Time`) so pipes line up in raw text
+- Build the table with `.claude/scripts/pad_table.py` rather than hand-padding: pipe `{"headers": [...], "rows": [[...], ...]}` as JSON to its stdin, it prints the aligned table
 
 ---
 
@@ -75,3 +76,4 @@ Column alignment rules (per FORMAT.md):
 - Column order: `Day` · `Dish` · `Sides` · `Cuisine`
 - Pad all columns except the last (`Cuisine`) so pipes line up in raw text
 - Empty `Sides` cells must be padded with spaces to match the column width
+- Build the table with `.claude/scripts/pad_table.py` (same usage as above) rather than hand-padding
